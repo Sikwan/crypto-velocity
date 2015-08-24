@@ -19,5 +19,7 @@ if (Meteor.isClient) {
 if (Meteor.isServer) {
   Meteor.startup(function () {
     // code to run on server at startup
+    encrypted = CryptoJS.AES.encrypt("Message", "Passphrase");
+    console.log(encrypted.toString());
   });
 }
